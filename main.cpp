@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-  int total = 0;
+  int total = 0;//defining stuff
   SecretDoor game;
   int numOfPlays;
   int wins =0;
@@ -14,24 +14,24 @@ int main()
   cin >> numOfPlays;
 
 
-  do
+  do //I think a do loop is works for this situation, a while or for loop would work too. 
   {   
-      total++;
-      game.guessDoorC();
-      game.guessDoorC();
-      if (game.isWinner())
+      total++; // keeps track of total games played
+      game.guessDoorC();//picks door c
+      game.guessDoorC();//confirms that the user picks door c
+      if (game.isWinner())//checks to see if user has won, but game.guessDoorC(); has to run at least twice. 
       { 
         
         
-        wins++;
+        wins++;//adds to wins count
       }else
       {
-       loss++;
+       loss++;//adds to loss count
       }
 
 
 
-  game.newGame();
+  game.newGame();//clears the "doors" so a new game can start
    
   }while ( total < numOfPlays);
 
